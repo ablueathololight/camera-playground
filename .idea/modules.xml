@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/basic/camera-playground.basic.main.iml" filepath="$PROJECT_DIR$/.idea/modules/basic/camera-playground.basic.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/texture-view/camera-playground.texture-view.main.iml" filepath="$PROJECT_DIR$/.idea/modules/texture-view/camera-playground.texture-view.main.iml" />
+    </modules>
+  </component>
+</project>
