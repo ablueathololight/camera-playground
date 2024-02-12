@@ -1,0 +1,57 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "hidden": true,
+      "name": "ML2-Default",
+      "displayName": "Magic-Leap-2-Default",
+      "description": "The common options for Magic Leap 2 build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "ANDROID_PLATFORM": "29",
+        "ANDROID_ABI": "x86_64",
+        "ANDROID_STL": "c++_static",
+        "CMAKE_TOOLCHAIN_FILE": "$env{ANDROID_SDK_HOME}/ndk/26.1.10909125/build/cmake/android.toolchain.cmake",
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+      },
+      "environment": {
+        "MLSDK": "$env{USERPROFILE}/MagicLeap/mlsdk",
+        "MLSDK_VERSION": "v1.5.0"
+      }
+    },
+    {
+      "name": "ML2-Debug",
+      "displayName": "ML2-Debug",
+      "description": "Sets Ninja generator, build and install directory",
+      "inherits": [
+        "ML2-Default"
+      ],
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "ML2-RelWithDebInfo",
+      "displayName": "ML2-RelWithDebInfo",
+      "description": "Sets Ninja generator, build and install directory",
+      "inherits": [
+        "ML2-Default"
+      ],
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+      }
+    },
+    {
+      "name": "ML2-Release",
+      "displayName": "ML2-Release",
+      "description": "Sets Ninja generator, build and install directory",
+      "inherits": [
+        "ML2-Default"
+      ],
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ]
+}
