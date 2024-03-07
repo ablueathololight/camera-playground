@@ -122,7 +122,7 @@ class CameraId {
   ACameraDevice* device_;
   std::string id_;
   acamera_metadata_enum_android_lens_facing_t facing_;
-  bool available_;  // free to use ( no other apps are using
+  bool available_;  // free to use ( no other apps are using)
   bool owner_;      // we are the owner of the camera
   explicit CameraId(const char* id)
       : device_(nullptr),
